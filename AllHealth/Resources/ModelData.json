@@ -1,0 +1,29 @@
+{
+    "controlShapes": ["rectangle", "circle", "triangle", "star"],
+    "controlColors": ["red", "yellow", "blue", "green"],
+    "childShapes": [
+        {
+            "shape": "circle",
+            "colorHex": "green",
+            "parentTraits": [
+                "red", "rectangle"
+            ]
+        },
+        {
+            "shape": "square",
+            "color": "yellow",
+            "parentTraits": [
+                "red", "circle"
+            ]
+        },
+        {
+            "shape": "rectangle",
+            "color": "yellow",
+            "parentTraits": [
+                "red", "triangle"
+            ]
+        }
+    ]
+    
+}
+

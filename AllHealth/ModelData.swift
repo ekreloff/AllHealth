@@ -12,12 +12,23 @@ import SwiftUI
 
 final class ViewModel: ObservableObject {
     @Published var dataModel: DataModel = load("ModelData.json")
+    @Published var selectedShape: ShapeType?
+    @Published var selectedColor: ColorType?
     
-    var selectedShape: ShapeType?
-    var selectedColor: UIColor?
+//    func childShape(from color: ColorType, and shape: ShapeType) -> ChildShape? {
+//        dataModel.childShapes.first {
+//            $0.parentTraits.contains(color.rawValue) && $0.parentTraits.contains(shape.rawValue)
+//        }
+//        nil
+//    }
     
-    func childShape(from color: ColorType, and shape: ShapeType) -> ChildShape? {
-        dataModel.childShapes.first {
+    
+    var childShape: ChildShape? {
+        guard let color = selectedColor, let shape = selectedShape else {
+            return nil
+        }
+        
+        return dataModel.childShapes.first {
             $0.parentTraits.contains(color.rawValue) && $0.parentTraits.contains(shape.rawValue)
         }
     }
@@ -49,7 +60,7 @@ enum ShapeType: String, Decodable {
     case circle, triangle, rectangle, square, star
     
     @ViewBuilder
-    var shape: some View {
+    var shapeView: some View {
         switch self {
         case .circle: Circle()
         case .triangle: VehicleBody()
@@ -73,75 +84,16 @@ enum ColorType: String, Decodable {
     }
 }
 
-//protocol ShapeObject {
-//    associatedtype ViewType
-//
-//    var color: UIColor { get }
-//
-//    @ViewBuilder
-//    var view: ViewType { get }
-//}
-//
-//struct BgView<Content>: View where Content: View {
-//    private let bgImage = Image.init(systemName: "m.circle.fill")
-//    private let content: Content
-//
-//    public init(@ViewBuilder content: () -> Content) {
-//        self.content = content()
-//    }
-//
-//    var body : some View {
-//        ZStack {
-//            bgImage
-//                .resizable()
-//                .opacity(0.2)
-//            content
-//        }
-//    }
-//}
-//
-//struct CircleObject: ShapeObject {
-//    typealias ViewType = Circle?
-//
-//    let color: UIColor
-//
-//    @ViewBuilder
-//    var view: ViewType {
-//        Circle()
-//            .fill(Color(uiColor: color)) as? Circle
-//    }
-//}
-
 struct DataModel: Decodable {
     let controlColors: [ColorType]
     let controlShapes: [ShapeType]
     let childShapes: [ChildShape]
-    
-    var colors: [UIColor] {
-        controlColors.map {
-            UIColor.from(Int($0.rawValue, radix: 16) ?? 0)
-        }
-    }
 }
 
 struct ChildShape: Decodable {
-    let colorHex: ColorType
+    let colorType: ColorType
     let shape: ShapeType
     let parentTraits: [String]
-    
-    var color: UIColor {
-        UIColor.from(Int(colorHex.rawValue, radix: 16) ?? 0)
-    }
-}
-
-extension UIColor {
-    static func from(_ rgbValue: Int) -> UIColor {
-        UIColor(
-            red: CGFloat((Float((rgbValue & 0xff0000) >> 16)) / 255.0),
-            green: CGFloat((Float((rgbValue & 0x00ff00) >> 8)) / 255.0),
-            blue: CGFloat((Float((rgbValue & 0x0000ff) >> 0)) / 255.0),
-            alpha: 1.0)
-    }
 }
 
 

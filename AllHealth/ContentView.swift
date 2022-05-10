@@ -8,39 +8,93 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    @ObservedObject var viewModel: ViewModel
     
     var body: some View {
-        Rectangle()
+        VStack {
+            VStack {
+            ShapeRow(shapes: viewModel.dataModel.controlShapes)
+                    .environmentObject(viewModel)
+            ColorRow(colors: viewModel.dataModel.controlColors)s
+                    .environmentObject(viewModel)
+            }
+            
+            if let childShape = viewModel.childShape {
+                childShape.shape.shapeView
+                    .foregroundColor(childShape.colorType.color)
+            } else {
+                Rectangle()
+                    .foregroundColor(.white)
+            }
+         
+        }
     }
-    
-    
-//    var scrolling
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: ViewModel())
     }
 }
 
 struct ShapeRow: View {
+    @EnvironmentObject var viewModel: ViewModel
+    
     var shapes: [ShapeType]
     
     var body: some View {
         ScrollView(.horizontal) {
             LazyHStack {
-                ForEach(0..<50, id: \.self) { shape in
-                    Circle()
+                ForEach(shapes, id: \.self) { shape in
+                    shape.shapeView
+                        .frame(width: 75, height: 75)
+                        .padding()
                         .gesture(
                             TapGesture()
                                 .onEnded {
-                                    print("test")
+                                    viewModel.selectedShape = shape
                                 }
                         )
                     
                 }
             }
+        }
+    }
+}
+
+struct ColorRow: View {
+    @EnvironmentObject var viewModel: ViewModel
+    
+    var colors: [ColorType]
+    
+    var body: some View {
+        ScrollView(.horizontal) {
+            LazyHStack {
+                ForEach(colors, id: \.self) { colorType in
+                    Rectangle()
+                        .frame(width: 75, height: 75)
+                        .padding()
+                        .foregroundColor(colorType.color)
+                        .gesture(
+                            TapGesture()
+                                .onEnded {
+                                    viewModel.selectedColor = colorType
+                                }
+                        )
+                    
+                }
+            }
+        }
+    }
+}
+
+struct ChildShapeView: View {
+    var childShape: ChildShape?
+    
+    var body: some View {
+        if let shapeView = childShape?.shape.shapeView, let color = childShape?.colorType.color {
+            shapeView
+                .foregroundColor(color)
         }
     }
 }

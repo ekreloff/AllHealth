@@ -4,21 +4,21 @@
     "childShapes": [
         {
             "shape": "circle",
-            "colorHex": "green",
+            "colorType": "green",
             "parentTraits": [
                 "red", "rectangle"
             ]
         },
         {
             "shape": "square",
-            "color": "yellow",
+            "colorType": "yellow",
             "parentTraits": [
                 "red", "circle"
             ]
         },
         {
             "shape": "rectangle",
-            "color": "yellow",
+            "colorType": "yellow",
             "parentTraits": [
                 "red", "triangle"
             ]

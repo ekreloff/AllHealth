@@ -20,9 +20,13 @@ struct ContentView: View {
             }
             
             if let childShape = viewModel.childShape {
-                childShape.shape.shapeView
-                    .foregroundColor(childShape.colorType.color)
-                    .padding()
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(.white)
+                    childShape.shape.shapeView
+                        .foregroundColor(childShape.colorType.color)
+                        .padding()
+                }
             } else {
                 Rectangle()
                     .foregroundColor(.white)
@@ -35,7 +39,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var viewModel: ViewModel {
         let viewModel = ViewModel()
-        viewModel.selectedShape = .rectangle
+        viewModel.selectedShape = .triangle
         viewModel.selectedColor = .red
         
         return viewModel

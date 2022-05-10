@@ -63,10 +63,10 @@ enum ShapeType: String, Decodable {
     var shapeView: some View {
         switch self {
         case .circle: Circle()
-        case .triangle: VehicleBody()
-        case .rectangle: Rectangle()
-        case .square: VehicleBody()
-        case .star: VehicleBody()
+        case .triangle: Triangle()
+        case .rectangle: Rectangle().frame(maxHeight: 50)
+        case .square: Rectangle()
+        case .star: RoundedStar(cornerRadius: 0)
         }
     }
 }

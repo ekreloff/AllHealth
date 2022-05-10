@@ -116,10 +116,32 @@ struct DataModel: Decodable {
     let controlColors: [ColorType]
     let controlShapes: [ShapeType]
     let childShapes: [ChildShape]
+    
+    var colors: [UIColor] {
+        controlColors.map {
+            UIColor.from(Int($0.rawValue, radix: 16) ?? 0)
+        }
+    }
 }
 
 struct ChildShape: Decodable {
     let colorHex: ColorType
     let shape: ShapeType
     let parentTraits: [String]
+    
+    var color: UIColor {
+        UIColor.from(Int(colorHex.rawValue, radix: 16) ?? 0)
+    }
 }
+
+extension UIColor {
+    static func from(_ rgbValue: Int) -> UIColor {
+        UIColor(
+            red: CGFloat((Float((rgbValue & 0xff0000) >> 16)) / 255.0),
+            green: CGFloat((Float((rgbValue & 0x00ff00) >> 8)) / 255.0),
+            blue: CGFloat((Float((rgbValue & 0x0000ff) >> 0)) / 255.0),
+            alpha: 1.0)
+    }
+}
+
+

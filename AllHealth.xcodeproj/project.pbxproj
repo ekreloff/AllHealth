@@ -10,12 +10,20 @@
 		86378A0E2829CC68004E97BD /* AllHealthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86378A0D2829CC68004E97BD /* AllHealthApp.swift */; };
 		86378A102829CC68004E97BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86378A0F2829CC68004E97BD /* ContentView.swift */; };
 		86378A122829CC6B004E97BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86378A112829CC6B004E97BD /* Assets.xcassets */; };
-		86378A152829CC6B004E97BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86378A142829CC6B004E97BD /* Preview Assets.xcassets */; };
 		86378A1F2829CC6B004E97BD /* AllHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86378A1E2829CC6B004E97BD /* AllHealthTests.swift */; };
 		86378A292829CC6B004E97BD /* AllHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86378A282829CC6B004E97BD /* AllHealthUITests.swift */; };
 		86378A2B2829CC6B004E97BD /* AllHealthUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86378A2A2829CC6B004E97BD /* AllHealthUITestsLaunchTests.swift */; };
-		86378A382829D811004E97BD /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86378A372829D811004E97BD /* ModelData.swift */; };
-		86378A3A2829DB03004E97BD /* ModelData.json in Resources */ = {isa = PBXBuildFile; fileRef = 86378A392829DB03004E97BD /* ModelData.json */; };
+		86378A382829D811004E97BD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86378A372829D811004E97BD /* ViewModel.swift */; };
+		86378A3A2829DB03004E97BD /* DataModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 86378A392829DB03004E97BD /* DataModel.json */; };
+		86CA0B47282B1048009BC367 /* EnumTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA0B46282B1048009BC367 /* EnumTypes.swift */; };
+		86CA0B49282B1074009BC367 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA0B48282B1074009BC367 /* DataModel.swift */; };
+		86CA0B4B282B108F009BC367 /* ChildShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA0B4A282B108F009BC367 /* ChildShape.swift */; };
+		86CA0B4D282B10BE009BC367 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA0B4C282B10BE009BC367 /* JSONParser.swift */; };
+		86CA0B50282B110D009BC367 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA0B4F282B110D009BC367 /* Triangle.swift */; };
+		86CA0B52282B1116009BC367 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA0B51282B1116009BC367 /* Star.swift */; };
+		86CA0B54282B1163009BC367 /* ShapeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA0B53282B1163009BC367 /* ShapeRow.swift */; };
+		86CA0B56282B1175009BC367 /* ColorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA0B55282B1175009BC367 /* ColorRow.swift */; };
+		86CA0B58282B12C6009BC367 /* ChildShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA0B57282B12C6009BC367 /* ChildShapeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,14 +48,22 @@
 		86378A0D2829CC68004E97BD /* AllHealthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHealthApp.swift; sourceTree = "<group>"; };
 		86378A0F2829CC68004E97BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		86378A112829CC6B004E97BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		86378A142829CC6B004E97BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		86378A1A2829CC6B004E97BD /* AllHealthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllHealthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86378A1E2829CC6B004E97BD /* AllHealthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHealthTests.swift; sourceTree = "<group>"; };
 		86378A242829CC6B004E97BD /* AllHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86378A282829CC6B004E97BD /* AllHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHealthUITests.swift; sourceTree = "<group>"; };
 		86378A2A2829CC6B004E97BD /* AllHealthUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHealthUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		86378A372829D811004E97BD /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
-		86378A392829DB03004E97BD /* ModelData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ModelData.json; sourceTree = "<group>"; };
+		86378A372829D811004E97BD /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		86378A392829DB03004E97BD /* DataModel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataModel.json; sourceTree = "<group>"; };
+		86CA0B46282B1048009BC367 /* EnumTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumTypes.swift; sourceTree = "<group>"; };
+		86CA0B48282B1074009BC367 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		86CA0B4A282B108F009BC367 /* ChildShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildShape.swift; sourceTree = "<group>"; };
+		86CA0B4C282B10BE009BC367 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		86CA0B4F282B110D009BC367 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		86CA0B51282B1116009BC367 /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
+		86CA0B53282B1163009BC367 /* ShapeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeRow.swift; sourceTree = "<group>"; };
+		86CA0B55282B1175009BC367 /* ColorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRow.swift; sourceTree = "<group>"; };
+		86CA0B57282B12C6009BC367 /* ChildShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildShapeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				86378A0C2829CC68004E97BD /* AllHealth */,
+				86378A3B2829DB0E004E97BD /* Resources */,
 				86378A1D2829CC6B004E97BD /* AllHealthTests */,
 				86378A272829CC6B004E97BD /* AllHealthUITests */,
 				86378A0B2829CC68004E97BD /* Products */,
@@ -98,22 +115,14 @@
 		86378A0C2829CC68004E97BD /* AllHealth */ = {
 			isa = PBXGroup;
 			children = (
-				86378A3B2829DB0E004E97BD /* Resources */,
 				86378A0D2829CC68004E97BD /* AllHealthApp.swift */,
-				86378A0F2829CC68004E97BD /* ContentView.swift */,
+				86378A372829D811004E97BD /* ViewModel.swift */,
+				86CA0B4C282B10BE009BC367 /* JSONParser.swift */,
+				86CA0B45282B101F009BC367 /* Models */,
+				86CA0B4E282B10FD009BC367 /* Views */,
 				86378A112829CC6B004E97BD /* Assets.xcassets */,
-				86378A132829CC6B004E97BD /* Preview Content */,
-				86378A372829D811004E97BD /* ModelData.swift */,
 			);
 			path = AllHealth;
-			sourceTree = "<group>";
-		};
-		86378A132829CC6B004E97BD /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				86378A142829CC6B004E97BD /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		86378A1D2829CC6B004E97BD /* AllHealthTests */ = {
@@ -136,9 +145,32 @@
 		86378A3B2829DB0E004E97BD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				86378A392829DB03004E97BD /* ModelData.json */,
+				86378A392829DB03004E97BD /* DataModel.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		86CA0B45282B101F009BC367 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				86CA0B46282B1048009BC367 /* EnumTypes.swift */,
+				86CA0B48282B1074009BC367 /* DataModel.swift */,
+				86CA0B4A282B108F009BC367 /* ChildShape.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		86CA0B4E282B10FD009BC367 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				86378A0F2829CC68004E97BD /* ContentView.swift */,
+				86CA0B4F282B110D009BC367 /* Triangle.swift */,
+				86CA0B51282B1116009BC367 /* Star.swift */,
+				86CA0B53282B1163009BC367 /* ShapeRow.swift */,
+				86CA0B55282B1175009BC367 /* ColorRow.swift */,
+				86CA0B57282B12C6009BC367 /* ChildShapeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,8 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86378A3A2829DB03004E97BD /* ModelData.json in Resources */,
-				86378A152829CC6B004E97BD /* Preview Assets.xcassets in Resources */,
+				86378A3A2829DB03004E97BD /* DataModel.json in Resources */,
 				86378A122829CC6B004E97BD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,9 +303,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86CA0B56282B1175009BC367 /* ColorRow.swift in Sources */,
+				86CA0B52282B1116009BC367 /* Star.swift in Sources */,
+				86CA0B49282B1074009BC367 /* DataModel.swift in Sources */,
+				86CA0B47282B1048009BC367 /* EnumTypes.swift in Sources */,
+				86CA0B4D282B10BE009BC367 /* JSONParser.swift in Sources */,
+				86CA0B54282B1163009BC367 /* ShapeRow.swift in Sources */,
+				86CA0B4B282B108F009BC367 /* ChildShape.swift in Sources */,
+				86CA0B58282B12C6009BC367 /* ChildShapeView.swift in Sources */,
 				86378A102829CC68004E97BD /* ContentView.swift in Sources */,
 				86378A0E2829CC68004E97BD /* AllHealthApp.swift in Sources */,
-				86378A382829D811004E97BD /* ModelData.swift in Sources */,
+				86378A382829D811004E97BD /* ViewModel.swift in Sources */,
+				86CA0B50282B110D009BC367 /* Triangle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

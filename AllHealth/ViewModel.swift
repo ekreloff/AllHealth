@@ -11,7 +11,7 @@ import UIKit
 import SwiftUI
 
 final class ViewModel: ObservableObject {
-    @Published var dataModel: DataModel = load("DataModel.json")
+    @Published var dataModel: DataModel = JSONParser.load("DataModel.json")
     @Published var selectedShape: ShapeType?
     @Published var selectedColor: ColorType?
     

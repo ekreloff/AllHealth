@@ -10,11 +10,11 @@
 		86378A0E2829CC68004E97BD /* AllHealthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86378A0D2829CC68004E97BD /* AllHealthApp.swift */; };
 		86378A102829CC68004E97BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86378A0F2829CC68004E97BD /* ContentView.swift */; };
 		86378A122829CC6B004E97BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86378A112829CC6B004E97BD /* Assets.xcassets */; };
-		86378A1F2829CC6B004E97BD /* AllHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86378A1E2829CC6B004E97BD /* AllHealthTests.swift */; };
 		86378A292829CC6B004E97BD /* AllHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86378A282829CC6B004E97BD /* AllHealthUITests.swift */; };
 		86378A2B2829CC6B004E97BD /* AllHealthUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86378A2A2829CC6B004E97BD /* AllHealthUITestsLaunchTests.swift */; };
 		86378A382829D811004E97BD /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86378A372829D811004E97BD /* ViewModel.swift */; };
 		86378A3A2829DB03004E97BD /* DataModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 86378A392829DB03004E97BD /* DataModel.json */; };
+		869F7704282B191800C35588 /* DataModelTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 86CA0B59282B13AB009BC367 /* DataModelTest.json */; };
 		86CA0B47282B1048009BC367 /* EnumTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA0B46282B1048009BC367 /* EnumTypes.swift */; };
 		86CA0B49282B1074009BC367 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA0B48282B1074009BC367 /* DataModel.swift */; };
 		86CA0B4B282B108F009BC367 /* ChildShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA0B4A282B108F009BC367 /* ChildShape.swift */; };
@@ -24,6 +24,9 @@
 		86CA0B54282B1163009BC367 /* ShapeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA0B53282B1163009BC367 /* ShapeRow.swift */; };
 		86CA0B56282B1175009BC367 /* ColorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA0B55282B1175009BC367 /* ColorRow.swift */; };
 		86CA0B58282B12C6009BC367 /* ChildShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA0B57282B12C6009BC367 /* ChildShapeView.swift */; };
+		86CA0B5A282B13AB009BC367 /* DataModelTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 86CA0B59282B13AB009BC367 /* DataModelTest.json */; };
+		86CA0B5C282B13D1009BC367 /* DataModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA0B5B282B13D1009BC367 /* DataModelTest.swift */; };
+		86FB9AC9282B1BF50014D8C6 /* ViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FB9AC8282B1BF50014D8C6 /* ViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +52,6 @@
 		86378A0F2829CC68004E97BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		86378A112829CC6B004E97BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86378A1A2829CC6B004E97BD /* AllHealthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllHealthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		86378A1E2829CC6B004E97BD /* AllHealthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHealthTests.swift; sourceTree = "<group>"; };
 		86378A242829CC6B004E97BD /* AllHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86378A282829CC6B004E97BD /* AllHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHealthUITests.swift; sourceTree = "<group>"; };
 		86378A2A2829CC6B004E97BD /* AllHealthUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHealthUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -64,6 +66,9 @@
 		86CA0B53282B1163009BC367 /* ShapeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeRow.swift; sourceTree = "<group>"; };
 		86CA0B55282B1175009BC367 /* ColorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRow.swift; sourceTree = "<group>"; };
 		86CA0B57282B12C6009BC367 /* ChildShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildShapeView.swift; sourceTree = "<group>"; };
+		86CA0B59282B13AB009BC367 /* DataModelTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataModelTest.json; sourceTree = "<group>"; };
+		86CA0B5B282B13D1009BC367 /* DataModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelTest.swift; sourceTree = "<group>"; };
+		86FB9AC8282B1BF50014D8C6 /* ViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +133,9 @@
 		86378A1D2829CC6B004E97BD /* AllHealthTests */ = {
 			isa = PBXGroup;
 			children = (
-				86378A1E2829CC6B004E97BD /* AllHealthTests.swift */,
+				86CA0B59282B13AB009BC367 /* DataModelTest.json */,
+				86CA0B5B282B13D1009BC367 /* DataModelTest.swift */,
+				86FB9AC8282B1BF50014D8C6 /* ViewModelTest.swift */,
 			);
 			path = AllHealthTests;
 			sourceTree = "<group>";
@@ -277,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				869F7704282B191800C35588 /* DataModelTest.json in Resources */,
 				86378A3A2829DB03004E97BD /* DataModel.json in Resources */,
 				86378A122829CC6B004E97BD /* Assets.xcassets in Resources */,
 			);
@@ -286,6 +294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86CA0B5A282B13AB009BC367 /* DataModelTest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +331,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86378A1F2829CC6B004E97BD /* AllHealthTests.swift in Sources */,
+				86FB9AC9282B1BF50014D8C6 /* ViewModelTest.swift in Sources */,
+				86CA0B5C282B13D1009BC367 /* DataModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
